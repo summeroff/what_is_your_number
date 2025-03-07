@@ -1,1 +1,9 @@
 local_files
+*.aux
+*.log
+*.out
+*.pdf
+*.fls
+*.fdb_latexmk
+
+
