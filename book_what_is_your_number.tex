@@ -1,31 +1,59 @@
-\documentclass{book}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{margin=1in}
-\title{Dimension's Edge: A Thriller Across Realities}
-\author{Author Name}
-\date{}
+\documentclass[12pt]{book}
+\usepackage{fontspec}
+\setmainfont{Noto Serif} % Clean, readable serif font with Cyrillic support
+\setsansfont{Roboto} % Modern sans-serif for headings
+\usepackage[utf8]{inputenc} % Ensures proper character encoding
+\usepackage{titlesec} % Customizes chapter and section titles
+\titleformat{\chapter}[display]
+    {\normalfont\Large\bfseries\sffamily} % Sans-serif, bold, large chapter titles
+    {\chaptertitlename\ \thechapter}{1em}{\Huge} % Spacing and size adjustments
+\titleformat{\part}[display]
+    {\normalfont\Huge\bfseries\sffamily} % Prominent part titles for trilogy structure
+    {\partname\ \thepart}{20pt}{\Huge}
+\usepackage{geometry} % Modern page layout
+\geometry{a4paper, margin=2.5cm} % Narrower margins for a contemporary look
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear default settings
+\fancyhead[LE,RO]{\thepage} % Page numbers on outer edges
+\renewcommand{\headrulewidth}{0pt} % No header rule for minimalism
+\fancypagestyle{plain}{ % Style for chapter opening pages
+    \fancyhf{}
+    \fancyfoot[C]{\thepage} % Page number centered at bottom
+    \renewcommand{\headrulewidth}{0pt}
+}
+\usepackage{csquotes} % For proper quotation formatting
+\usepackage{hyperref} % For clickable links in PDF
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\usepackage[english]{babel} % Retained from your original for language support
 
 \begin{document}
 
-\frontmatter
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\fontsize{48}{60}\selectfont What Is Your Number\par} % Large, bold title
+    \vspace{2cm}
+    {\Large Vladimir Sumarov\par} % Author name in a clean size
+\end{titlepage}
+\clearpage
 
-\maketitle
+\chapter*{Content Warning}
+This book contains material that may be disturbing or triggering for some readers, including:
+\begin{itemize}
+    \item Explicit language
+    \item Graphic violence
+    \item Mature adult themes, including intense combat, interrogation, and sexual content
+\end{itemize}
+These elements are purely fictional and do not reflect the author’s personal views. Reader discretion is advised.
+\clearpage
 
-\newpage
-\begin{center}
-\Large \textbf{Content Warning} \\
-\vspace{1em}
-This book contains explicit language, graphic violence, and mature adult themes, including intense combat, interrogation, and sexual content. Reader discretion is advised.
-\end{center}
-
-\newpage
 \tableofcontents
-
-\mainmatter
-
-
+\clearpage
 \chapter{Putin's POV}
 \section{The Kremlin's Cold Grip}
 
